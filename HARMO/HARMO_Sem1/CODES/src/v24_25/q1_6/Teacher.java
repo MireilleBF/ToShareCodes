@@ -1,4 +1,4 @@
-package v23_24.q1_6;
+package v24_25.q1_6;
 
 public class Teacher {
 

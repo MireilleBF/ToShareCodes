@@ -1,4 +1,4 @@
-package v23_24.q7_9;
+package v24_25.q7_9;
 
 public class Student {
 
@@ -34,7 +34,7 @@ public class Student {
         } else {
             this.birthYear = DEFAULT_BIRTH_YEAR;
         }
-        email = name + "." + firstName + "@etu.univ-cotedazur.fr";
+        email = name + "." + firstName + DEFAULT_EMAIL;
     }
 
     private boolean isValidBirthYear(int dateOfBirth) {

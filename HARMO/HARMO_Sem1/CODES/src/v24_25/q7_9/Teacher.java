@@ -1,4 +1,4 @@
-package v23_24.q7_9;
+package v24_25.q7_9;
 
 public class Teacher {
 
@@ -51,7 +51,7 @@ public class Teacher {
     }
 
     private void buildEmail() {
-        this.email = name + "." + firstName + "@univ-cotedazur";
+        this.email = name + "." + firstName + DEFAULT_EMAIL;
     }
 
 
@@ -82,14 +82,14 @@ public class Teacher {
         }
 
         int number = 0;
-        String numberPart = officeName.substring(2,officeName.length() - 1);
+        String numberPart = officeName.substring(2,officeName.length());
         try {
             number = Integer.parseInt(numberPart);
         }
         catch (NumberFormatException e) {
             return false;
         }
-        return (number >= 0) || (number <= 500);
+        return (number >= 0) && (number <= 500);
     }
 
 
@@ -157,6 +157,7 @@ public class Teacher {
         Teacher teacher5 = new Teacher("Doe", "John", "A Temple");
         System.out.println(teacher5.getOffice() + " == " + DEFAULT_OFFICE);
         Teacher teacher6 = new Teacher("Doe", "John", "A50");
+        System.out.println(teacher6.getOffice() + " == " + DEFAULT_OFFICE);
 
 
     }
